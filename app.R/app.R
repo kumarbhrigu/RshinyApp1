@@ -12,7 +12,7 @@ library(rstanarm)
 library(joineRML)
 
 
-shinyApp(
+
   ui_page2 <- fluidPage(
     
     titlePanel("jmbayesBig"),
@@ -59,7 +59,7 @@ shinyApp(
       )
     )
     
-  ),
+  )
   server_page2 <- function(input, output, session) {
     
     
@@ -245,10 +245,5 @@ shinyApp(
       })
       
     })
-    
-    
-    
-    
-  },
-  options = list(height=1000,width="100%")
-)
+  }
+  shinyApp(ui = ui_page2, server = server_page2)
